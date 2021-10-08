@@ -7,14 +7,19 @@
     "private": true,
     "dependencies": {
         "@sap/cds": "^5",
+        "@sap/hana-client": "^2.10.13",
+        "@sap/hdbext": "^7.3.1",
+        "@sap/hdi-deploy": "^4.2.0",
         "express": "^4",
-        "hdb": "^0.18.3"
+        "hdb": "^0.18.3",
+        "sap-hdbext-promisfied": "^2.202108.3"
     },
     "devDependencies": {
         "sqlite3": "^5.0.2"
     },
     "scripts": {
-        "start": "cds run"
+        "start": "cds run",
+        "hana": "node node_modules/@sap/hdi-deploy/deploy.js --root ./gen/db --auto-undeploy --exit"
     },
     "eslintConfig": {
         "extends": "eslint:recommended",
@@ -44,7 +49,7 @@
     "cds": {
         "requires": {
             "db": {
-                "kind": "sql"
+                "kind": "hana"
             }
         },
         "hana": {

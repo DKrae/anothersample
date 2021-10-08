@@ -1,4 +1,4 @@
-PROCEDURE "SAMPLEPROC" () 
+PROCEDURE "SAMPLEPROC" (out result "SAMPLE") 
 LANGUAGE SQLSCRIPT 
 SQL SECURITY INVOKER 
 AS 
@@ -8,4 +8,6 @@ BEGIN
     SELECT max("ID") + 1 INTO lv_idx FROM "SAMPLE";
 
     INSERT INTO "SAMPLE" VALUES (:lv_idx, 'test' || CAST(:lv_idx AS NVARCHAR(5000)));
+
+    result = select * from "SAMPLE";
 END
