@@ -1,0 +1,21 @@
+{
+  "role": {
+    "name": "external_access_g#",
+    "object_privileges": [
+      {
+        "name": "SAMPLEPROC",
+        "type": "PROCEDURE",
+        "privileges_with_grant_option": [
+          "EXECUTE"
+        ]
+      },
+      {
+          "name": "SAMPLE",
+          "type": "TABLE",
+          "privileges_with_grant_option": [
+              "SELECT", "INSERT"
+          ]
+      }
+    ]
+  }
+}

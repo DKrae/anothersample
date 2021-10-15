@@ -1,0 +1,21 @@
+{
+  "role": {
+    "name": "external_access",
+    "object_privileges": [
+      {
+        "name": "SAMPLEPROC",
+        "type": "PROCEDURE",
+        "privileges": [
+          "EXECUTE"
+        ]
+      },
+      {
+          "name": "SAMPLE",
+          "type": "TABLE",
+          "privileges": [
+              "SELECT", "INSERT"
+          ]
+      }
+    ]
+  }
+}
